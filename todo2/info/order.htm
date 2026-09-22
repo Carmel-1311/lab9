@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>สั่งอาหาร | Warm Bakery Cafe</title>
+  <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="brand">Warm Bakery Cafe</div>
+    <nav aria-label="Main navigation">
+      <a href="/home">หน้าแรก</a>
+      <a href="/menu">เมนู</a>
+      <a class="active" href="/order">สั่งอาหาร</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>สั่งอาหารและจองโต๊ะ</h1>
+    <form action="#" method="post" class="form-grid">
+      <section>
+        <h2>เลือกรายการอาหาร</h2>
+        <label><input type="checkbox" name="menu[]" value="Butter Croissant"> Butter Croissant - 85 บาท</label><br>
+        <label><input type="checkbox" name="menu[]" value="Banana Bread"> Banana Bread - 75 บาท</label><br>
+        <label><input type="checkbox" name="menu[]" value="Chocolate Fudge Cake"> Chocolate Fudge Cake - 120 บาท</label><br>
+        <label><input type="checkbox" name="menu[]" value="Hot Latte"> Hot Latte - 85 บาท</label><br><br>
+        <label>จำนวน
+          <input type="number" name="qty" min="1" value="1">
+        </label>
+        <label>คำสั่งพิเศษ
+          <textarea name="note" rows="4" placeholder="เช่น หวานน้อย, อุ่นร้อน"></textarea>
+        </label>
+      </section>
+
+      <section>
+        <h2>ข้อมูลผู้สั่ง</h2>
+        <label>ชื่อผู้รับ
+          <input type="text" name="name" required>
+        </label>
+        <label>เบอร์โทรศัพท์
+          <input type="tel" name="phone" required>
+        </label>
+        <label>วันที่รับอาหาร
+          <input type="date" name="date" required>
+        </label>
+        <label>เวลา
+          <input type="time" name="time" required>
+        </label>
+        <label>รูปแบบบริการ
+          <select name="service" required>
+            <option>รับที่ร้าน</option>
+            <option>จัดส่งถึงบ้าน</option>
+            <option>จองโต๊ะและรับประทานที่ร้าน</option>
+          </select>
+        </label>
+        <button type="submit">ยืนยันรายการสั่งซื้อ</button>
+        <button type="reset">ล้างข้อมูล</button>
+      </section>
+    </form>
+  </main>
+</body>
+</html>
